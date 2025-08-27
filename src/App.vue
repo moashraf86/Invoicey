@@ -1,7 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from "@/components/layout/Header.vue"
+import InvoiceBuilder from "@/components/builder/InvoiceBuilder.vue"
+import InvoicePreview from "@/components/preview/InvoicePreview.vue"
+</script>
 
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline">Hello World</h1>
+    <Header />
+    <main class="flex gap-4 divide-x divide-gray-200 h-[calc(100dvh-64px)]">
+      <InvoiceBuilder />
+      <InvoicePreview />
+    </main>
   </div>
 </template>
