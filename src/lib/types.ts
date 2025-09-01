@@ -1,16 +1,19 @@
 export type Invoice = {
   invoiceNumber: string
-  reference: string
   currency: string
   invoiceDate: string
   dueDate: string
   billFrom: {
     name: string
+    website: string
     address: string
     city: string
     state: string
     zip: string
     country: string
+    email: string
+    phone: string
+    taxId: string
   }
   billTo: {
     name: string
@@ -19,6 +22,8 @@ export type Invoice = {
     state: string
     zip: string
     country: string
+    email: string
+    phone: string
   }
   lineItems: {
     name: string
@@ -26,7 +31,11 @@ export type Invoice = {
     price: number
     total: number
   }[]
+  paymentDetails: {
+    bankName: string
+    accountNumber: string
+    iban: string
+    swiftCode: string
+  }
   total: number
-  subtotal: number
-  tax: number
 }
